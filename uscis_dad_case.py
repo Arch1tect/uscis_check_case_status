@@ -28,7 +28,7 @@ payload = {
 resp = requests.post('https://egov.uscis.gov/casestatus/mycasestatus.do', data=payload)
 soup = BeautifulSoup(resp.text)
 
-print soup.prettify()
+# print soup.prettify() UnicodeEncodeError: 'ascii' codec can't encode character u'\u2022'
 
 res = soup.find("div", class_="rows text-center")
 
